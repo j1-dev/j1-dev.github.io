@@ -1,0 +1,393 @@
+html {
+  margin: 0;
+  padding: 0;
+  font-family: 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  overflow: visible;
+}
+
+/* NAV CSS */
+nav {
+  position: sticky;
+  top: 7px;
+  height: 90px;
+  list-style-type: none;
+  border-radius: 1em;
+  border: 1px solid #c1c1c1;
+  background-color: white;
+  text-align: center;
+  transition: all 0.15s;
+  z-index: 9999;
+}
+
+nav ul {
+  list-style: none;
+  display: inline-flex;
+  margin-top: 13px;
+}
+
+nav ul a {
+  display: block;
+  color: black;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 20px;
+  padding: 10px;
+  letter-spacing: 1px;
+}
+
+#tienda {
+  position: relative;
+}
+
+.left-item {
+  position: absolute;
+  left: 5px;
+  bottom: 10px;
+}
+
+#nav-logo {
+  width: 75px;
+}
+
+.right-item {
+  position: absolute;
+  right: 5px;
+}
+
+.logout-icon {
+  height: 30px;
+  width: auto;
+}
+
+.home {
+  display: none;
+}
+
+/* menu desplegable */
+
+nav ul ul {
+  display: none;
+  position: absolute;
+  top: 82%;
+  right: -30%;
+  left: -30%;
+  background: white;
+  padding: 0;
+  border-radius: 20px;
+  border: 2px #fee solid;
+}
+
+/* items del menu desplegable */
+
+nav ul ul li {
+  float: none;
+  line-height: 120%;
+}
+
+nav ul li:hover ul a {
+  display: block;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 17px;
+}
+
+nav ul ul li:hover a:hover {
+  color: blue;
+  background-color: #f0f0f0;
+  transition: all 0.15s;
+}
+
+/* items del menu desplegable al pasar el ratón */
+
+nav ul #tienda:hover > ul {
+  display: block;
+}
+
+.checkbtn {
+  font-size: 30px;
+  width: 80px;
+  height: 80px;
+  color: black;
+  float: right;
+  line-height: 95px;
+  cursor: pointer;
+  display: none;
+}
+#check {
+  display: none;
+}
+
+/* BUTTON CSS */
+
+.button {
+  padding: 8px;
+  margin-inline: 4px;
+  border-radius: 40px;
+  border: 2px solid gray;
+  background-color: white;
+  font-size: 28px;
+  font-weight: 400;
+  transition: all 0.15s ease-in;
+}
+
+.button:hover {
+  background-color: white;
+  border-color: blue;
+  box-shadow: 0 1em 2em -0.5em #c1c1c1;
+}
+
+.button:hover a {
+  color: black;
+}
+
+/* BODY CSS */
+
+.top-area {
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* POSTBOX CSS */
+
+.postbox {
+  position: relative;
+  width: 33.33%;
+  border-radius: 1em;
+  border: 1px solid black;
+  outline: none;
+  transition: all 0.3s;
+  margin: auto;
+  padding: 8px;
+}
+
+.postbox textarea {
+  outline: none;
+  resize: none;
+  width: 80%;
+  border: none;
+  margin: auto;
+  font-size: 20px;
+  padding-block: 30px;
+}
+
+.postbox:focus-within {
+  box-shadow: 0 1em 2em -0.5em #c1c1c1;
+}
+
+.postbox-buttons {
+  text-align: right;
+}
+
+.postbox-buttons button {
+  font-size: 16px;
+}
+
+/* POST CSS */
+
+.post {
+  display: flex;
+  width: 33.33%;
+  margin: auto;
+  margin-top: 30px;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border: 1px solid cyan;
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  border-bottom: 1px solid #f0f0f0;
+  width: 100%;
+}
+
+.post-header-username {
+  margin-left: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.post-header-time {
+  font-size: 12px;
+  color: #999;
+}
+
+.post-header-profilepic {
+  float: right;
+  width: 48px;
+  height: auto;
+  border-radius: 16px;
+}
+
+.post-body {
+  padding: 16px;
+}
+
+.post-pic {
+  padding: 8px;
+  border-radius: 16px;
+}
+
+.post-description {
+  margin: 8px;
+  font-size: 20px;
+  color: #333;
+}
+
+.post-footer {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.post-footer-buttons {
+  display: flex;
+}
+
+.post-footer-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  padding: 8px;
+  color: #333;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+.post-icon {
+  width: 24px;
+  height: auto;
+  padding-inline: 8px;
+}
+
+/* FOOTER CSS */
+
+footer {
+  background-color: darkslategray;
+  width: 100%;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+footer ul {
+  list-style-type: none;
+}
+
+footer ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+@media (max-width: 1300px) {
+  .postbox {
+    width: 70%;
+  }
+
+  .post {
+    width: 70%;
+  }
+
+  .left-item {
+    position: absolute;
+    left: 5px;
+    bottom: 10px;
+    scale: 80%;
+  }
+
+  nav ul a {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 858px) {
+  .checkbtn {
+    display: block;
+  }
+
+  #menu {
+    margin: 0;
+    position: fixed;
+    top: 0;
+    width: 75%;
+    height: 100vh;
+    background: white;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+    z-index: 9999px;
+    display: block;
+    border-right: 2px black solid;
+  }
+
+  nav > #menu > li {
+    margin: 50px;
+  }
+
+  nav #menu li a {
+    font-size: 20px;
+  }
+
+  li a:hover,
+  li a.active {
+    background: none;
+    color: red;
+  }
+
+  #check:checked ~ #menu {
+    left: -5%;
+  }
+
+  .postbox {
+    width: 80%;
+  }
+
+  .post {
+    width: 80%;
+  }
+
+  .right-item {
+    position: static;
+  }
+
+  .home {
+    transform: translate3d(-50%, -50%, 0); /*Cambiar origen al centro*/
+    position: absolute;
+    font-size: 50px;
+    font-weight: 500;
+    display: flex;
+    top: 50%;
+    left: 50%;
+  }
+
+  nav ul ul {
+    display: none;
+    position: absolute;
+    top: 82%;
+    right: 5%;
+    left: 5%;
+    background: white;
+    padding: 0;
+    border-radius: 20px;
+    border: 2px #fee solid;
+  }
+
+  nav ul ul li {
+    float: none;
+    line-height: 120%;
+  }
+
+  nav ul ul li a:hover {
+    color: blue;
+  }
+}
