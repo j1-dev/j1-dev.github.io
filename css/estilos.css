@@ -274,19 +274,38 @@ nav ul #tienda:hover > ul {
 /* FOOTER CSS */
 
 footer {
-  background-color: darkslategray;
-  width: 100%;
+  background-color: black;
   padding: 20px;
-  margin-top: 20px;
+  color: white;
+  text-align: center;
 }
 
-footer ul {
-  list-style-type: none;
+.footer-container {
+  display: flex;
+  justify-content: space-between;
 }
 
-footer ul li a {
+.footer-links ul,
+.footer-social ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links ul li,
+.footer-social ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.footer-links ul li a,
+.footer-social ul li a {
   color: white;
   text-decoration: none;
+}
+
+.footer-social ul li a i {
+  font-size: 20px;
 }
 
 @media (max-width: 1300px) {
@@ -307,6 +326,11 @@ footer ul li a {
 
   nav ul a {
     font-size: 18px;
+  }
+
+  .footer-container {
+    width: 70%;
+    margin: auto;
   }
 }
 
@@ -390,6 +414,15 @@ footer ul li a {
   nav ul ul li a:hover {
     color: blue;
   }
+
+  .footer-container {
+    flex-direction: column;
+  }
+
+  .footer-links,
+  .footer-social {
+    margin-bottom: 20px;
+  }
 }
 
 /* Estilo para el formulario */
@@ -461,11 +494,13 @@ button[type='submit']:hover {
 }
 
 .valid-icon {
-  height: 35px;
+  height: 50px;
+  font-size: 30px;
 }
 
 .invalid-icon {
-  height: 35px;
+  height: 50px;
+  font-size: 30px;
 }
 
 .password-requirements {
@@ -490,9 +525,12 @@ button[type='submit']:hover {
   display: none;
 }
 
-.input-container .valid-icon i,
-.input-container .invalid-icon i {
+.input-container .valid-icon i {
   color: green;
+}
+
+.input-container .invalid-icon i {
+  color: red;
 }
 
 .input-container.invalid .valid-icon,
