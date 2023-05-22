@@ -391,3 +391,116 @@ footer ul li a {
     color: blue;
   }
 }
+
+/* Estilo para el formulario */
+form {
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px black solid;
+  width: 60%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+form > button > a {
+  text-decoration: none;
+  color: white;
+}
+
+form > a {
+  color: black;
+  margin-top: 14px;
+}
+
+form li {
+  list-style-type: none;
+}
+
+/* Estilo para las etiquetas de los campos de formulario */
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Estilo para los campos de formulario */
+input[type='text'],
+input[type='password'] {
+  border: 1px solid #333;
+  border-radius: 3px;
+  padding: 10px;
+  width: 200px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+input[type='checkbox'] {
+  margin-bottom: 10px;
+}
+
+/* Estilo para el botón de envío */
+button[type='submit'] {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Estilo para el botón de envío cuando el cursor está sobre él */
+button[type='submit']:hover {
+  background-color: #444;
+}
+
+.valid-icon {
+  height: 35px;
+}
+
+.invalid-icon {
+  height: 35px;
+}
+
+.password-requirements {
+  display: none;
+}
+
+.input-container {
+  position: relative;
+}
+
+.input-container input[type='text'],
+.input-container input[type='password'] {
+  padding-right: 25px;
+}
+
+.input-container .valid-icon,
+.input-container .invalid-icon {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none;
+}
+
+.input-container .valid-icon i,
+.input-container .invalid-icon i {
+  color: green;
+}
+
+.input-container.invalid .valid-icon,
+.input-container.valid .invalid-icon {
+  display: none;
+}
+
+.input-container.valid .valid-icon,
+.input-container.invalid .invalid-icon {
+  display: block;
+}
